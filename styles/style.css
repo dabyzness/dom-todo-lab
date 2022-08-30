@@ -6,6 +6,10 @@ body {
   transform: translate(-50%, -50%);
 }
 
+div {
+  display: flex;
+}
+
 ul {
   list-style-position: inside;
   text-align: left;
