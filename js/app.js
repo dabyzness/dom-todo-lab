@@ -4,9 +4,12 @@ const submitBtn = document.getElementById("submit-button");
 const resetBtn = document.getElementById("reset");
 const list = document.getElementById("todo-list");
 
+// Create event listeners
 submitBtn.addEventListener("click", handleSubmit);
 resetBtn.addEventListener("click", handleReset);
 
+// Define functions for event listeners
+// Add To-Do list item to page
 function handleSubmit(e) {
   if (!input.value) {
     return;
@@ -18,6 +21,7 @@ function handleSubmit(e) {
   input.value = "";
 }
 
+// Delete all items from to-do list
 function handleReset(e) {
   for (let item of document.querySelectorAll("li")) {
     list.removeChild(item);
