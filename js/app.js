@@ -7,6 +7,7 @@ const list = document.getElementById("todo-list");
 // Create event listeners
 submitBtn.addEventListener("click", handleSubmit);
 resetBtn.addEventListener("click", handleReset);
+list.addEventListener("click", handleDelete);
 
 // Define functions for event listeners
 // Add To-Do list item to page
@@ -26,4 +27,9 @@ function handleReset(e) {
   for (let item of document.querySelectorAll("li")) {
     list.removeChild(item);
   }
+}
+
+// Delete To-do List Item
+function handleDelete(e) {
+  list.removeChild(e.target);
 }
